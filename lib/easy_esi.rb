@@ -46,7 +46,7 @@ class ActionController::Base
   # cache hit:
   #  filter_with_esi -> filter_without_esi -> filter_with_esi
   #  after_filter will not be called, but <include> needs to be replaced
-  around_filter :render_with_esi
+  around_action :render_with_esi
   def render_with_esi
     @do_not_replace_esi = true
     yield
