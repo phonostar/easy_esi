@@ -58,7 +58,7 @@ class ActionController::Base
 
   def self.enable_esi
     self.esi_enabled = true
-    after_filter :render_esi
+    after_action :render_esi
   end
 
   protected
